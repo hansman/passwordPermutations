@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "optimist": "^0.6.1"
+  }
+}
