@@ -6,6 +6,11 @@ var argv  = require('optimist')
                 .demand(['s'])
                 .argv;
 
+if (typeof argv.s !== 'string' || !argv.s.length) {
+  console.log('Please pass in a string', typeof argv.s, argv.s.length);
+  process.exit(-1);
+}
+
 var findPermutations = function(str, index, replacers, results) {
     results = results || {};
     if (index === str.length) {
